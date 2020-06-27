@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #002B21;
+  background: rgb(22, 45, 38);
   color: white;
 }
 
@@ -73,7 +73,9 @@ table {
   top: 0;
   left: 0;
   z-index: -1;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-image: url('../images/stars/star1.png')
 }
 
@@ -87,15 +89,21 @@ table {
 
 /* SPECIAL */
 
+@font-face {
+  font-family: 'sarus_flower_ding_srbregular';
+  src: url('../fonts/flower-font-webfont.woff2') format('woff2'),
+       url('../fonts/flower-font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
-  width: 1200vw;
-  height: 3000vh;
+  font-family: Wingdings, 'sarus_flower_ding_srbregular';
   margin: 0;
 }
 
 a.button {
-  /* border: 1px solid #002B21; */
+  /* border: 1px solid rgb(22, 45, 38); */
   /* padding: 0.7em 0.75em 0.6em; */
   background: pink;
   /* text-decoration: none !important; */
@@ -131,11 +139,10 @@ a.button {
 }
 
 nav a {
-  background: #002B21;
+  background: rgb(22, 45, 38);
 }
 
 #important-info {
-  font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
   font-style: normal;
   position: absolute;
   top: 0;
@@ -148,13 +155,12 @@ nav a {
 
 #important-info .info {
   background: white;
-  color: #002B21;
+  color: rgb(22, 45, 38);
   padding: 1.2em 2.4em;
   padding-top: 1em;
   padding-bottom: 1em;
   position: relative;
   z-index: 2;
-  font-size: 3.6em;
   line-height: 1.1;
   max-width: 1000px;
   margin: 0 auto;
@@ -167,7 +173,6 @@ nav a {
 }
 
 #important-info .welcome {
-  font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
   font-size: 18px;
   line-height: 1.4;
   margin-top: 1em;
@@ -177,17 +182,48 @@ nav a {
   justify-content: center;
 }
 
+p.mobile,
+h4.mobile,
+nav.mobile-mini,
+#important-info .mobile,
+#mobile-pictures {
+  display: none;
+}
+
+h4.mobile {
+  margin-bottom: 0;
+}
+
 #important-info .pic {
-  /* position: absolute;
-  top: -12px;
-  right: 16px;
-  max-width: 212px;
-  z-index: 1; */
   max-width: 240px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 5.5em;
+  margin: 0.5em 0;
+}
+
+h2.mobile {
+  font-weight: normal;
+  display: none;
+}
+
+.paper p.special-info {
+  font-size: 2em;
+}
+
+#about .paper p:first-child {
+  margin-top: 0;
+}
+
+.paragraph {
+  margin-top: 2em;
 }
 
 .main-nav__section-links a,
@@ -208,7 +244,7 @@ nav #message {
 
 .main-nav a.is-active {
   background: white;
-  color: #002B21;
+  color: rgb(22, 45, 38);
 }
 
 #home {
@@ -231,69 +267,45 @@ section {
 }
 
 #travel {
-  top: 120vw;
-  left: 200vh;
+  top: 100vh;
+  left: 200vw;
 }
 
 #accommodations {
-  top: 220vw;
-  left: 400vh;
+  top: 220vh;
+  left: 400vw;
 }
 
 #itinerary {
-  top: 200vh;
-  left: 800vw;
+  top: 800vh;
+  left: 100vw;
 }
 
 #registry {
-  top: 2800vh;
-  left: 700vw;
+  top: 1000vh;
+  left: 400vw;
 }
 
 #about {
-  top: 800vh;
-  left: 300vw;
+  top: 500vh;
+  left: 600vw;
+}
+
+#planet-alan {
+  top: 1100vh;
+  left: 600vw;
 }
 
 .space {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 40vh;
+  height: 40vh;
+  padding: 20px;
 }
 
 .space.large {
-  width: 800px;
-  height: 800px;
-}
-
-#image-one {
-  top: 210vw;
-  left: 340vh;
-}
-
-#image-two {
-  top: 260vh;
-  left: 700vw;
-}
-
-#image-three {
-  top: 2600vh;
-  left: 750vw;
-}
-
-#image-four {
-  top: 800vh;
-  left: 750vw;
-}
-
-#image-five {
-  top: 2000vh;
-  left: 800vw;
-}
-
-#planet-nina {
-  top: 2800vh;
-  left: 900vw;
+  width: 80vh;
+  height: 80vh;
 }
 
 .planet {
@@ -362,18 +374,17 @@ section {
 }
 
 .space-fact {
-  background: rgb(13, 31, 33);
+  background: rgb(22, 45, 38);
   padding: 0.2em;
   float: left;
-  max-width: 500px;
+  width: 50vw;
   font-size: 2em;
-  font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
 }
 
 .paper {
   background: white;
-  color: #002B21;
-  border: 1px solid #002B21;
+  color: rgb(22, 45, 38);
+  border: 1px solid rgb(22, 45, 38);
   padding: 1.5em;
   max-width: 800px;
   margin-bottom: 24px;
@@ -387,7 +398,7 @@ section {
 }
 
 .paper a {
-  color:  #002B21;
+  color:  rgb(22, 45, 38);
   text-decoration: underline;
 }
 
@@ -396,7 +407,7 @@ section {
 }
 
 td {
-  border: 1px solid #002B21;
+  border: 1px solid rgb(22, 45, 38);
   padding: 0.7em 0.75em 0.6em;
   vertical-align: top;
   width: 50%;
@@ -450,15 +461,15 @@ td.fourth {
 }
 
 @keyframes flicker {
-  0% { background: rgba(13, 31, 33, 0.1); }
-  20% { background: rgba(13, 31, 33, 0.2); }
-  40% { background: rgba(13, 31, 33, 0.1); }
-  44% { background: rgba(13, 31, 33, 0.3); }
-  58% { background: rgba(13, 31, 33, 0.1); }
-  62% { background: rgba(13, 31, 33, 0.2); }
-  78% { background: rgba(13, 31, 33, 0.1); }
-  98% { background: rgba(13, 31, 33, 0.2); }
-  100% { background: rgba(13, 31, 33, 0.1); }
+  0% { background: rgba(19, 4, 99, 0.1); }
+  20% { background: rgba(19, 4, 99, 0.2); }
+  40% { background: rgba(19, 4, 99, 0.1); }
+  44% { background: rgba(19, 4, 99, 0.3); }
+  58% { background: rgba(19, 4, 99, 0.1); }
+  62% { background: rgba(19, 4, 99, 0.2); }
+  78% { background: rgba(19, 4, 99, 0.1); }
+  98% { background: rgba(19, 4, 99, 0.2); }
+  100% { background: rgba(19, 4, 99, 0.1); }
 }
 
 h3 {
@@ -467,7 +478,6 @@ h3 {
   font-weight: normal;
   margin-top: -0.1em;
   margin-bottom: 2em;
-  font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
 }
 
 @media screen and (max-width: 980px) {
@@ -477,11 +487,14 @@ h3 {
   }
 
   #important-info .info {
-    font-size: 2.2em;
     line-height: 1.2;
     padding: 0.5em;
     padding-right: 1em;
     padding-left: 1em;
+  }
+
+  h1 {
+    font-size: 4em;
   }
 
   h3 {
@@ -493,12 +506,47 @@ h3 {
 
 @media screen and (max-width: 550px) {
 
+  body, html {
+    width: auto;
+    height: auto;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  .space,
+  .planet,
+  .planet-image,
+  table.desktop {
+    display: none;
+  }
+
   section {
-    padding: 2px;
+    padding: 1em 0.8em;
+    height: auto;
+    min-height: 0;
+    width: auto;
+    position: static;
+  }
+
+  #important-info .mobile {
+    display: inline;
+  }
+
+  #important-info .desktop {
+    display: none;
   }
 
 	.main-nav {
+    position: static;
     font-size: 0.8em;
+    padding-bottom: 1em;
+  }
+
+  .main-nav__section-links {
+    display: flex;
+    flex-direction: column;
   }
 
   .main-nav__section-links a, .main-nav__home-link__container a {
@@ -506,6 +554,7 @@ h3 {
   }
 
   .paper {
+    float: none;
     margin-right: 0;
   }
 
@@ -513,17 +562,63 @@ h3 {
     padding: 1em;
   }
 
+  .paper:last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+  }
+
+  h2.mobile,
+  p.mobile,
+  h4.mobile,
+  #mobile-pictures {
+    display: block;
+  }
+
+  nav.mobile-mini {
+    display: block;
+    float: right;
+    margin-top: -2.6em;
+  }
+
+  nav.mobile-mini a {
+    padding: 0.6em 0.9em 0.5em;
+    font-size: 12.8px;
+    border: 1px solid white;
+  }
+
+  h3 {
+    font-size: 1.75em;
+  }
+  
+  .spacer {
+    display: none;
+  }
+
+  #home {
+    width: auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  #important-info {
+    position: static;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+  }
+
   #important-info .info {
     padding: 0.5em;
     padding-top: 1em;
     padding-bottom: 1em;
-    font-size: 1.8em;
     line-height: 1.15;
-    max-width: 400px;
   }
   
   #important-info .welcome {
-    font-family: Webdings, Wingdings, 'Zapf Dingbats', sans-serif;
     font-size: 12.8px;
     margin-top: 1em;
   }
@@ -539,8 +634,38 @@ h3 {
   }
 
   td,
-  .did-you-know {
+  .did-you-know .info,
+  .paper p,
+  .paragraph {
     font-size: 12.8px;
+  }
+
+  .paper p.special-info {
+    font-size: 1.2em;
+  }
+
+  .space-fact {
+    float: none;
+    width: auto;
+    font-size: 1.5em;
+    margin-top: 3.2em;
+    background: transparent;
+  }
+
+  .paragraph {
+    margin-top: 1em;
+  }
+
+  #planet-alan {
+    display: none;
+  }
+
+  #travel,
+  #accommodations,
+  #itinerary,
+  #registry,
+  #about {
+    margin-top: 3.6em;
   }
 
 }
